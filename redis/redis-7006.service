@@ -1,0 +1,13 @@
+[Unit]
+Description=redis-7006
+After=network.target
+
+[Service]
+ExecStart=/home/redis/redis-server /home/redis/7006/redis-7006.conf --daemonize no
+ExecStop=/bin/kill -s TERM $MAINPID
+User=redis
+Group=redis
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

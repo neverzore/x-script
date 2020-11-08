@@ -1,0 +1,16 @@
+cluster.name: es-cluster
+node.name: es03
+network.bind_host: 0.0.0.0
+network.publish_host: 192.168.33.53
+http.port: 19200
+transport.tcp.port: 19300
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+node.master: true
+node.data: true
+bootstrap.memory_lock: true
+discovery.seed_hosts: ["192.168.34.148:19300","192.168.33.51:19300","192.168.33.53:19300"]
+cluster.initial_master_nodes: ["192.168.34.148","192.168.33.51","192.168.33.53"]
+gateway.recover_after_nodes: 2
+gateway.recover_after_time: 5m
+gateway.expected_nodes: 3
