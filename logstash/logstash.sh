@@ -1,0 +1,1 @@
+docker run --restart always -d --name logstash -p 5044:5044 -p 9600:9600 -u 1000 -v /home/logstash/config:/usr/share/logstash/config --add-host=elasticsearch:host -v /home/logstash/data:/usr/share/logstash/data -v /home/logstash/logs:/usr/share/logstash/logs -v /home/logstash/pipeline:/usr/share/logstash/pipeline --log-opt max-size=64m docker.elastic.co/logstash/logstash:7.10.0

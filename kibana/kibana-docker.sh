@@ -1,0 +1,1 @@
+docker run --restart always -d --name kibana -e ELASTICSEARCH_URL="http://ip:port" -e ELASTICSEARCH_HOSTS="http://ip:port" -e ELASTICSEARCH_USERNAME="kibana_system" -e ELASTICSEARCH_PASSWORD="password" --log-opt max-size=64m -p 5601:5601 docker.elastic.co/kibana/kibana:7.10.0

@@ -1,0 +1,1 @@
+ss -ant | grep 1521 | gawk 'match($5, /::ffff:(.*):[0-9]+/, a) {print a[1]}' | awk '{s[$1] += 1}END{for(i in s){print i, s[i]}}' | sort -k2 -rn

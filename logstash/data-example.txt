@@ -1,0 +1,68 @@
+{
+       "process" : {
+          "pid" : 22952,
+        "title" : "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64/jre/bin/java"
+    },
+       "service" : {
+            "node" : {
+            "name" : "localhost.localdomain"
+        },
+         "runtime" : {
+               "name" : "Java",
+            "version" : "1.8.0_252"
+        },
+            "name" : "dict",
+        "language" : {
+               "name" : "Java",
+            "version" : "1.8.0_252"
+        }
+    },
+        "labels" : {
+        "name" : "PS Old Gen"
+    },
+         "agent" : {
+                "name" : "java",
+             "version" : "1.19.0",
+        "ephemeral_id" : "b10f6d45-547b-45c5-9ac5-a44063e462fb"
+    },
+      "observer" : {
+                   "id" : "4f009e05-8bbc-4998-a276-af1354fe2e65",
+              "version" : "7.10.0",
+                 "type" : "apm-server",
+             "hostname" : "9e044c9fd08b",
+        "version_major" : 7,
+         "ephemeral_id" : "7a9d5086-ea20-4bb5-a9a8-9121c5969586"
+    },
+      "@version" : "1",
+          "tags" : [
+        "beats_input_raw_event"
+    ],
+    "@timestamp" : "2020-12-18T23:57:37.477Z",
+          "host" : {
+                  "os" : {
+            "platform" : "Linux"
+        },
+                "name" : "localhost.localdomain",
+                  "ip" : "ip",
+            "hostname" : "localhost.localdomain",
+        "architecture" : "amd64"
+    },
+     "processor" : {
+        "event" : "metric",
+         "name" : "metric"
+    },
+           "ecs" : {
+        "version" : "1.6.0"
+    },
+           "jvm" : {
+        "memory" : {
+            "heap" : {
+                "pool" : {
+                          "max" : 5595201536.0,
+                    "committed" : 274726912.0,
+                         "used" : 62003056.0
+                }
+            }
+        }
+    }
+}

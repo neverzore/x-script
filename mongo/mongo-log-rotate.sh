@@ -1,0 +1,1 @@
+/bin/kill -SIGUSR1 `cat /home/mongodb/run/mongod.pid`
