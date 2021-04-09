@@ -56,7 +56,7 @@ EOF
 
 echo "vm.zone_reclaim_mode = 0" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_keepalive_time = 300" >> /etc/sysctl.conf
-echo "vm.swappiness = 0" >> /etc/sysctl.conf
+echo "vm.swappiness = 1" >> /etc/sysctl.conf
 sysctl -p
 
 sed -i "s/SELINUX=enforcing/SELINUX=disabled/" /etc/selinux/config
