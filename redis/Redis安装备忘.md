@@ -6,3 +6,5 @@
   > vm.swappiness = 0
 
 - 关闭THP，减少内存碎片
+
+- 创建Redis相关用户

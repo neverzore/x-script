@@ -5,7 +5,6 @@ After=network.target
 [Service]
 ExecStart=/data/redis/redis-server /data/redis/redis.conf --daemonize no
 ExecStop=/data/redis/redis-cli shutdown
-Restart=always
 User=redis
 Group=redis
 LimitNOFILE=65535

@@ -1,2 +1,2 @@
-echo "vm.swappiness = 0" >> /etc/sysctl.conf
+echo "vm.swappiness = 1" >> /etc/sysctl.conf
 sysctl -p
