@@ -9,6 +9,12 @@ kubeadm join k8s-cluster:6443 --token iahzqe.n3c4h9c1uosynegj \
     --discovery-token-ca-cert-hash sha256:2d92f470948621a6b5f8d9b668bf65515dc5d4386e2f664c43791601b090e95e \
     --control-plane --certificate-key ca8d2fe0a20b7fbf419aca48b4481f9968d6fce376bbfc80728fbf526c20bae1
 
+kubeadm join k8s-cluster:6443 --token 8jtxmi.7xgqtqbjavwss3z9 \
+    --discovery-token-ca-cert-hash sha256:5e057765aaaa6e6e642591b210ed39dec67df643b4cb3a7ca4405641e79c50b9
+
+kubeadm join k8s-cluster:6443 --token 8jtxmi.7xgqtqbjavwss3z9 \
+    --discovery-token-ca-cert-hash sha256:5e057765aaaa6e6e642591b210ed39dec67df643b4cb3a7ca4405641e79c50b9 \
+    --control-plane --certificate-key 9a92d52e8000c475eb9f4699e11955c3b8431cd189e8c3305ee1571245740b06
 # To make kubectl work for your non-root user, run these commands, which are also part of the kubeadm init output:
 
 mkdir -p $HOME/.kube
@@ -20,7 +26,7 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
+#https://kubernetes.io/zh/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#pod-network
 
 
 # Your Kubernetes control-plane has initialized successfully!

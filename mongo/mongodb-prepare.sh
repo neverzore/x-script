@@ -2,8 +2,8 @@
 groupadd mongodb && useradd -m -g mongodb -s /bin/bash mongodb
 
 cat >> /etc/security/limits.conf <<EOF
-mongodb soft nproc 32000
-mongodb hard nproc 32000
+mongodb soft nproc 64000
+mongodb hard nproc 64000
 mongodb soft nofile 64000
 mongodb hard nofile 64000
 EOF
@@ -55,7 +55,7 @@ EOF
 # EOF
 
 echo "vm.zone_reclaim_mode = 0" >> /etc/sysctl.conf
-echo "net.ipv4.tcp_keepalive_time = 300" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_keepalive_time = 120" >> /etc/sysctl.conf
 echo "vm.swappiness = 1" >> /etc/sysctl.conf
 sysctl -p
 
